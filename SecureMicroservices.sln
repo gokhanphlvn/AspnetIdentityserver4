@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.API", "Movies.API\Movies.API.csproj", "{AFD791E0-C38B-4EE7-AABA-F2FAF146D5EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movies.API", "Movies.API\Movies.API.csproj", "{AFD791E0-C38B-4EE7-AABA-F2FAF146D5EB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer", "IdentityServer\IdentityServer.csproj", "{229793CC-2A45-4C1F-8DC3-F04B0835F6DC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movies.Client", "Movies.Client\Movies.Client.csproj", "{FCBAA321-5E18-4887-A75A-CD84AF522B50}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateway", "ApiGateway\ApiGateway.csproj", "{05220645-0847-412A-8846-BDD01945E10C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{AFD791E0-C38B-4EE7-AABA-F2FAF146D5EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFD791E0-C38B-4EE7-AABA-F2FAF146D5EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFD791E0-C38B-4EE7-AABA-F2FAF146D5EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{229793CC-2A45-4C1F-8DC3-F04B0835F6DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{229793CC-2A45-4C1F-8DC3-F04B0835F6DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{229793CC-2A45-4C1F-8DC3-F04B0835F6DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{229793CC-2A45-4C1F-8DC3-F04B0835F6DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCBAA321-5E18-4887-A75A-CD84AF522B50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCBAA321-5E18-4887-A75A-CD84AF522B50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCBAA321-5E18-4887-A75A-CD84AF522B50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCBAA321-5E18-4887-A75A-CD84AF522B50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05220645-0847-412A-8846-BDD01945E10C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05220645-0847-412A-8846-BDD01945E10C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05220645-0847-412A-8846-BDD01945E10C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05220645-0847-412A-8846-BDD01945E10C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,23 +1,29 @@
 ﻿#nullable disable
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Movies.API.Data;
-using Movies.API.Model;
 
 namespace Movies.API.Controllers
 {
+    #region USINGS
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Security.Claims;
+    using System.Threading.Tasks;
+    using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Http;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.EntityFrameworkCore;
+    using Movies.API.Data;
+    using Movies.API.Model;
+    #endregion
+
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize("ClientIdPolicy")]
     public class MoviesController : ControllerBase
     {
-        private readonly MoviesAPIContext _context;
+        private readonly MoviesContext _context;
 
-        public MoviesController(MoviesAPIContext context)
+        public MoviesController(MoviesContext context)
         {
             _context = context;
         }
@@ -26,6 +32,8 @@ namespace Movies.API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Movie>>> GetMovie()
         {
+            var currentUser = User.Claims;
+            //var currentUserID = currentUser.FirstOrDefault(f => f.ValueType == ClaimTypes.Email).Value;
             return await _context.Movie.ToListAsync();
         }
 
